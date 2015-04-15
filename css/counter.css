@@ -1,0 +1,190 @@
+@CHARSET "UTF-8";
+
+#counter {
+    background-image: linear-gradient(top, rgb(255,255,255), rgb(240,240,240));
+    background-image: -o-linear-gradient(top, rgb(255,255,255), rgb(240,240,240));
+    background-image: -moz-linear-gradient(top, rgb(255,255,255), rgb(240,240,240));
+    background-image: -webkit-linear-gradient(top, rgb(255,255,255), rgb(240,240,240));
+    background-image: -ms-linear-gradient(top, rgb(255,255,255), rgb(240,240,240));
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) inset;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+#counter h3 img{
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 4px 0;
+}
+
+.count-icon {
+    background-image: url("../images/stopwatch_black.png");
+    background-size: 64px 64px;
+    height: 64px;
+    width: 64px;
+}
+
+#countdown {
+    font-family: helvetica;
+    display: inline-block;
+}
+
+#days, #hours, #minutes, #seconds{
+    color: #707478;
+    font-size: 45px;
+    /*font-size: 20px;*/
+    text-shadow: 0 1px 0 #FFFFFF;
+    /*display: inline;*/
+    padding: 2px 4px;
+    /*padding: 0 4px 0 4px;*/
+    border-left: 2px solid #D1CFCF;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-top: 2px solid #D1CFCF;
+    box-shadow: 2px 2px 0 #FCF7F7;
+    float: left;
+}
+#numb{
+    color: #707478;
+    font-size: 45px;
+    /*font-size: 20px;*/
+    text-shadow: 0 1px 0 #FFFFFF;
+    /*display: inline;*/
+    padding: 2px 4px;
+    /*padding: 0 4px 0 4px;*/
+    border-left: 2px solid #D1CFCF;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-top: 2px solid #D1CFCF;
+    box-shadow: 2px 2px 0 #FCF7F7;
+}
+
+#days-span, #hours-span,#minutes-span,#seconds-span{
+    color: #707478;
+    font-size: 10px;
+    text-shadow: 0 1px 0 #FFFFFF; 
+    /*margin-left: 5px;*/
+    
+    margin: 0 10px 0 5px;
+    top: 23px;
+    float: left;
+    position: relative;
+}
+
+#numb-span{
+    color: #707478;
+    font-size: 10px;
+    text-shadow: 0 1px 0 #FFFFFF; 
+    /*margin-left: 5px;*/
+}
+
+#datenow {
+    color: #707478;
+    font-family: helvetica;
+    /*font-size: 11px;*/
+    text-shadow: 0 1px 0 #FFFFFF; 
+    /*margin-top: 5px;*/
+    margin-top: 24px;
+    
+}
+
+.counts{
+    display: inline-block;
+    position: relative;
+}
+
+#count-1 {
+    float: left;
+    left: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+#count-2 {
+    text-align: center;
+}
+#count-3 {
+    float: right;
+    right: 10px;
+}
+#clock{
+    position: relative;
+    line-height: normal;
+}
+
+
+.blue #days, .blue #hours, .blue #minutes, .blue #seconds, .blue #numb{
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #A7A7A7;
+    border-left: 2px solid #205086;
+    border-top: 2px solid #205086;
+    box-shadow: 2px 2px 0 #5088BB;
+}
+
+.blue #days-span, .blue #hours-span, .blue #minutes-span, .blue #seconds-span, .blue #numb-span {
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #A7A7A7;
+}
+
+.blue #datenow {
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #A7A7A7;
+}
+
+.blue .count-icon {
+    background-image: url("../images/stopwatch_white.png");
+}
+
+#counter.blue {
+    background-image: linear-gradient(top, #4781B3, #37629A);
+    background-image: -o-linear-gradient(top, #4781B3, #37629A);
+    background-image: -moz-linear-gradient(top, #4781B3, #37629A);
+    background-image: -webkit-linear-gradient(top, #4781B3, #37629A);
+    background-image: -ms-linear-gradient(top, rgb(255,255,255), #37629A);
+}
+
+@media (max-width: 830px) {
+    .counts{
+        display: block;
+    }
+    #count-3{
+        float: none;
+        right: 0;
+    }
+    
+}
+@media (max-width: 720px) {
+    #count-1{
+        display: inline-block;
+        float: none;
+    }
+}
+@media (max-width: 610px) {
+    #minutes{
+        clear: both;
+    }
+    #days{
+        margin-bottom: 10px;
+    }
+    #minutes-span{
+        margin-right: 15px;
+    }
+}
+@media (max-width: 400px) {
+    #count-1{
+        display: inline-block;
+        float: none;
+    }
+    #days, #hours, #minutes, #seconds {
+        clear: both;
+        margin-bottom: 10px;
+    }
+}

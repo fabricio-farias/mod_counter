@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="administrator">
+	<name>mod_counter</name>
+	<author>Fabricio Farias</author>
+	<creationDate>November 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>fabriciorelicario@gmail.com</authorEmail>
+	<authorUrl>www.isgh.org.br</authorUrl>
+	<version>2.5.0</version>
+	<description>MOD_COUNTER_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_counter">mod_counter.php</filename>
+		<filename>index.html</filename>
+		<filename>counter.txt</filename>
+		<filename>fopen.php</filename>
+		<filename>mod_counter.xml</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_counter.ini</language>
+		<language tag="pt-BR">pt-BR.mod_counter.ini</language>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_COUNTER_HTML" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                            <field
+					name="moduletime_speed"
+					type="text"
+					label="MOD_COUNTER_MODULETIME_SPEED_LABEL"
+					description="MOD_COUNTER_MODULETIME_SPEED_DESC" />
+                            
+                            <field
+					name="theme"
+					type="radio"
+					label="MOD_COUNTER_MODULETHEME_LABEL"
+					description="MOD_COUNTER_MODULETHEME_DESC"
+					default="blue">
+					<option
+						value="blue">JBlue</option>
+					<option
+						value="white">JWhite</option>
+				</field>
+                                
+                            <field
+					name="module_type"
+					type="radio"
+					label="MOD_COUNTER_MODULETYPE_LABEL"
+					description="MOD_COUNTER_MODULETYPE_DESC"
+					default="n">
+					<option value="n">JNumber</option>
+					<option value="d">JDate</option>
+				</field>
+                                
+                            <field
+					name="module_counting"
+					type="radio"
+					label="MOD_COUNTER_MODULECOUNTING_LABEL"
+					description="MOD_COUNTER_MODULECOUNTING_DESC"
+					default="0">
+					<option value="0">JStop</option>
+					<option value="1">JStart</option>
+				</field>
+                                
+                                <field name="spacer1" type="spacer" class="text"
+					label="MOD_COUNTER_MODULE_NUMBERNAME_LABEL"
+				/> 
+                                
+                            <field
+					name="moduletime_value_of"
+					type="text"
+					label="MOD_COUNTER_MODULETIME_VALUE_OF_LABEL"
+					description="MOD_COUNTER_MODULETIME_VALUE_OF_DESC" />
+                            <field
+					name="moduletime_value_to"
+					type="text"
+					label="MOD_COUNTER_MODULETIME_VALUE_TO_LABEL"
+					description="MOD_COUNTER_MODULETIME_VALUE_TO_DESC" />
+				
+                                       
+                            <field name="spacer2" type="spacer" class="text"
+                                   label="MOD_COUNTER_MODULE_DATENAME_LABEL"
+				/>
+                            
+                            <field
+					name="moduletime_value_date"
+					type="text"
+					label="MOD_COUNTER_MODULETIME_VALUE_DATE_LABEL"
+					description="MOD_COUNTER_MODULETIME_VALUE_DATE_DESC" />
+			</fieldset>
+                        
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
